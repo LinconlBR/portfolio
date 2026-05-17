@@ -7,6 +7,14 @@
 html {
   scroll-behavior: smooth;
 }
+#hero-code {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #3c3c3c;
+  white-space: nowrap;
+  position: relative;
+  margin: 2em;
+}
 
 /* Loading Screen */
 .loader-overlay {
