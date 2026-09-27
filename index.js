@@ -434,38 +434,6 @@
             observer.observe(el);
         });
 
-        /* Antiga função de typing effect, substituída por uma mais simples para o texto "while(alive){" 
-        // Matrix Typing Effect for Hero Greeting
-        const greetingElement = document.getElementById('hero-greeting');
-        const finalText = "Olá! 👋";
-        const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*{}';
-        function matrixTypingEffect() {
-            let iterations = 0;
-            const interval = setInterval(() => {
-                greetingElement.innerHTML = finalText
-                    .split('')
-                    .map((char, index) => {
-                        if (index < iterations) {
-                            return finalText[index];
-                        }
-                        if (char === ' ' || char === '👋') {
-                            return char;
-                        }
-                        return chars[Math.floor(Math.random() * chars.length)];
-                    })
-                    .join('');
-
-                if (iterations >= finalText.length) {
-                    clearInterval(interval);
-                }
-
-                iterations += 1/3;
-            }, 50);
-        }
-        // Start the effect after a short delay
-        setTimeout(matrixTypingEffect, 2000);
-        */ 
-       
         // animação de Escrita do code-hero --> 
         const text = ["while(alive){", "aprender();","viajar();", "coffe++;","}"]; ;
         let index = 0;
@@ -488,7 +456,7 @@
 
 
         // Journey Map with Leaflet
-        const initialView = { center: [48.5, 10], zoom: 4 };
+        const initialView = { center: [22, -8], zoom: 2 };
 
         const map = L.map('journey-map', {
             center: initialView.center,
@@ -525,44 +493,103 @@
         // Group locations by country
         const locations = [
             {
-                coords: [50.9375, 6.9603],
-                country: 'Germany',
+                coords: [40.4168, -3.7038],
+                country: 'Espanha',
+                companies: [{ city: 'Rota internacional', company: 'Costa Crociere S.p.A.', period: 'Jul 2023 - Fev 2024', role: 'Animator Cruise Staff' }]
+            },
+            {
+                coords: [60.4720, 8.4689],
+                country: 'Noruega',
+                companies: [{ city: 'Rota internacional', company: 'Costa Crociere S.p.A.', period: 'Jul 2023 - Fev 2024', role: 'Animator Cruise Staff' }]
+            },
+            {
+                coords: [56.2639, 9.5018],
+                country: 'Dinamarca',
+                companies: [{ city: 'Rota internacional', company: 'Costa Crociere S.p.A.', period: 'Jul 2023 - Fev 2024', role: 'Animator Cruise Staff' }]
+            },
+            {
+                coords: [51.1657, 10.4515],
+                country: 'Alemanha',
+                companies: [{ city: 'Rota internacional', company: 'Costa Crociere S.p.A.', period: 'Jul 2023 - Fev 2024', role: 'Animator Cruise Staff' }]
+            },
+            {
+                coords: [41.8719, 12.5674],
+                country: 'Itália',
+                companies: [{ city: 'Rota internacional', company: 'Costa Crociere S.p.A.', period: 'Jul 2023 - Fev 2024', role: 'Animator Cruise Staff' }]
+            },
+            {
+                coords: [46.2276, 2.2137],
+                country: 'França',
+                companies: [{ city: 'Rota internacional', company: 'Costa Crociere S.p.A.', period: 'Jul 2023 - Fev 2024', role: 'Animator Cruise Staff' }]
+            },
+            {
+                coords: [39.3999, -8.2245],
+                country: 'Portugal',
+                companies: [{ city: 'Rota internacional', company: 'Costa Crociere S.p.A.', period: 'Jul 2023 - Fev 2024', role: 'Animator Cruise Staff' }]
+            },
+            {
+                coords: [55.3781, -3.4360],
+                country: 'Inglaterra',
+                companies: [{ city: 'Rota internacional', company: 'Costa Crociere S.p.A.', period: 'Jul 2023 - Fev 2024', role: 'Animator Cruise Staff' }]
+            },
+            {
+                coords: [-38.4161, -63.6167],
+                country: 'Argentina',
                 companies: [
-                    {
-                        city: 'Cologne',
-                        company: 'Unicepta',
-                        period: '2020 - Present',
-                        role: 'Senior Software Engineer'
-                    }
+                    { city: 'Rota internacional', company: 'Costa Crociere S.p.A.', period: 'Jul 2023 - Fev 2024', role: 'Animator Cruise Staff' },
+                    { city: 'Rota internacional', company: 'MSC Cruises', period: 'Nov 2024 - Fev 2025', role: 'Cruise Staff' }
                 ]
             },
             {
-                coords: [41.3275, 19.8187],
-                country: 'Albania',
+                coords: [-32.5228, -55.7658],
+                country: 'Uruguai',
+                companies: [
+                    { city: 'Rota internacional', company: 'Costa Crociere S.p.A.', period: 'Jul 2023 - Fev 2024', role: 'Animator Cruise Staff' },
+                    { city: 'Rota internacional', company: 'MSC Cruises', period: 'Nov 2024 - Fev 2025', role: 'Cruise Staff' }
+                ]
+            },
+            {
+                coords: [-23.5505, -46.6333],
+                country: 'São Paulo-Brasil',
+                companies: [{ city: 'São Paulo', company: 'MSC Cruises', period: 'Nov 2024 - Fev 2025', role: 'Cruise Staff' }]
+            },
+            {
+                coords: [46.8182, 8.2275],
+                country: 'Suíça',
+                companies: [{ city: 'Intercâmbio', company: 'Intercâmbio de Dança', period: 'Abr 2019 (3 meses)', role: 'Bailarino / Intercambista' }]
+            },
+            {
+                coords: [47.5162, 14.5501],
+                country: 'Áustria',
+                companies: [{ city: 'Intercâmbio', company: 'Intercâmbio de Dança', period: 'Abr 2019 (3 meses)', role: 'Bailarino / Intercambista' }]
+            },
+            {
+                coords: [-4.0906, -38.4839],
+                country: 'Brasil',
                 companies: [
                     {
-                        city: 'Tirana',
-                        company: 'Ritech Solutions',
-                        period: '2018 - 2020',
-                        role: 'Senior Software Engineer'
+                        city: 'Remoto',
+                        company: 'DevNow LTDA',
+                        period: '2026 - Atual',
+                        role: 'Desenvolvedor Front-End (Voluntário)'
                     },
                     {
-                        city: 'Tirana',
-                        company: 'Group of Companies',
-                        period: '2015 - 2017',
-                        role: 'Software Engineer'
-                    }
-                ]
-            },
-            {
-                coords: [48.8566, 2.3522],
-                country: 'France',
-                companies: [
+                        city: 'Fortaleza, Ceará',
+                        company: 'ECO Energia',
+                        period: '2022 - 2023',
+                        role: 'Eletrotécnico'
+                    },
                     {
-                        city: 'Paris',
-                        company: 'Gutenberg Technology',
-                        period: '2017 - 2018',
-                        role: 'Software Engineer'
+                        city: 'Horizonte, Ceará',
+                        company: 'Invest Energia Solar',
+                        period: '2021',
+                        role: 'Auxiliar de Montagem'
+                    },
+                    {
+                        city: 'Rota internacional',
+                        company: 'Costa Crociere S.p.A.',
+                        period: 'Jul 2023 - Fev 2024',
+                        role: 'Animator Cruise Staff'
                     }
                 ]
             }
@@ -573,11 +600,12 @@
 
         // Add custom neo-brutalist markers
         locations.forEach(location => {
-            const isCurrent = location.country === 'Germany';
+            const displayName = location.label || location.country;
+            const isCurrent = location.country === 'Brasil';
             const markerIcon = L.divIcon({
                 className: isCurrent ? 'neo-marker neo-marker-current' : 'neo-marker',
                 html: `
-                    <div class="neo-marker-label ${isCurrent ? 'neo-marker-label-current' : ''}">${location.country}</div>
+                    <div class="neo-marker-label ${isCurrent ? 'neo-marker-label-current' : ''}">${displayName}</div>
                     <div class="neo-marker-pin ${isCurrent ? 'neo-marker-pin-current' : ''}"></div>
                 `,
                 iconSize: isCurrent ? [35, 35] : [30, 30],
@@ -587,7 +615,7 @@
 
             // Build popup content with all companies for this country
             let popupContent = `<div class="map-popup">`;
-            popupContent += `<div class="map-popup-country">${location.country}</div>`;
+            popupContent += `<div class="map-popup-country">${displayName}</div>`;
 
             location.companies.forEach((company, index) => {
                 if (index > 0) popupContent += `<div class="map-popup-divider"></div>`;
@@ -610,19 +638,43 @@
             markers[location.country] = marker;
         });
 
-        // Add click handlers to timeline items
+        // Add click handlers to timeline items — cada item pode acender vários pins ao mesmo tempo
         document.querySelectorAll('.timeline-item-flat').forEach(item => {
             item.addEventListener('click', () => {
-                const country = item.getAttribute('data-country');
-                const marker = markers[country];
-                if (marker) {
-                    map.setView(marker.getLatLng(), 6, {
+                const countriesAttr = item.getAttribute('data-countries') || item.getAttribute('data-country');
+                if (!countriesAttr) return;
+
+                const countryKeys = countriesAttr.split(',').map(c => c.trim()).filter(Boolean);
+                const activeMarkers = countryKeys.map(c => markers[c]).filter(Boolean);
+                if (activeMarkers.length === 0) return;
+
+                // Remove destaque de qualquer seleção anterior
+                Object.values(markers).forEach(m => {
+                    const el = m.getElement();
+                    if (el) el.classList.remove('neo-marker-highlight');
+                });
+
+                // Destaca todos os pins da experiência clicada
+                activeMarkers.forEach(m => {
+                    const el = m.getElement();
+                    if (el) el.classList.add('neo-marker-highlight');
+                });
+
+                if (activeMarkers.length === 1) {
+                    map.setView(activeMarkers[0].getLatLng(), 6, {
                         animate: true,
                         duration: 1
                     });
                     setTimeout(() => {
-                        marker.openPopup();
+                        activeMarkers[0].openPopup();
                     }, 500);
+                } else {
+                    const group = L.featureGroup(activeMarkers);
+                    map.flyToBounds(group.getBounds(), {
+                        padding: [50, 50],
+                        animate: true,
+                        duration: 1.2
+                    });
                 }
             });
         });

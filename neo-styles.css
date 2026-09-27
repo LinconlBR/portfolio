@@ -2250,6 +2250,20 @@ body[data-theme="dark"] .neo-marker-label {
   background: var(--secondary);
 }
 
+/* Destaque quando o pin faz parte da experiência selecionada na timeline */
+.neo-marker-highlight .neo-marker-pin {
+  background: var(--pink);
+  box-shadow: 6px 6px 0 var(--border);
+  animation: pulse 1s ease-in-out infinite;
+  z-index: 20;
+}
+
+.neo-marker-highlight .neo-marker-label {
+  background: var(--pink);
+  color: var(--white);
+  box-shadow: 4px 4px 0 var(--border);
+}
+
 /* Leaflet controls styling */
 .leaflet-control-zoom {
   border: none !important;
@@ -3364,35 +3378,6 @@ body[data-theme="dark"] .language-item:hover {
   }
 }
 
-/* Navbar LazyFire Logo */
-.nav-lazyfire {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0.35rem 0.75rem;
-  border: 3px solid var(--border);
-  background: var(--white);
-  box-shadow: 3px 3px 0 var(--border);
-  transition: all 0.2s ease;
-  text-decoration: none;
-}
-
-.nav-lazyfire:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 1px 1px 0 var(--border);
-}
-
-.lazyfire-logo {
-  display: block;
-}
-
-.nav-lazyfire-text {
-  font-family: 'Caveat', cursive;
-  font-weight: 700;
-  font-size: 1.2rem;
-  color: var(--text);
-}
-
 /* Projects Section - Creator Showcase */
 .section-compact {
   padding-top: 1rem;
@@ -3470,9 +3455,9 @@ body[data-theme="dark"] .language-item:hover {
 
 .creator-projects-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 2.5rem;
-  max-width: 750px;
+  max-width: 1050px;
   margin: 0 auto;
 }
 
@@ -3504,16 +3489,8 @@ body[data-theme="dark"] .creator-project {
   background: #3a3a3a;
 }
 
-body[data-theme="dark"] .nav-lazyfire {
-  background: #3a3a3a;
-}
-
 /* Responsive projects */
 @media (max-width: 768px) {
-  .nav-lazyfire {
-    display: none;
-  }
-
   .creator-showcase {
     padding: 0.5rem;
   }

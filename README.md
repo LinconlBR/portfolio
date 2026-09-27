@@ -52,41 +52,24 @@ The palette uses CSS custom properties for light/dark theming:
 
 **Falling Decorative Icons** - SVG icons around the hero photo drop with gravity when you start scrolling.
 
-## Terminal Mode
-
-Visit [/terminal.html](https://portfolio-chi-six-63.vercel.app/terminal.html) for an interactive terminal-style resume.
-
-Features:
-- Type `help` to see available commands
-- Multiple color themes (Default, Dracula, Solarized, Nord)
-- Split terminal panes (horizontal/vertical)
-- Built-in Snake game (via p5.js)
-- Command history with arrow keys
-
 ## Project Structure
 
 ```
 .
-├── index.html          # Main portfolio (neo-brutalist)
-├── neo-styles.css      # Styles for index.html
-├── terminal.html       # Terminal-style resume
-├── styles.css          # Styles for terminal.html
-├── script.js           # Terminal logic & commands
+├── index.html          # Main portfolio page
+├── neo-styles.css      # Styles
+├── index.js            # Interactions, scroll effects & journey map
 ├── favicon.svg         # Site favicon
-├── image/              # Assets (avatar, icons, pirate)
-├── CNAME               # Custom domain config
-├── robots.txt          # Search engine directives
-├── sitemap.xml         # Sitemap for SEO
-└── LICENSE             # MIT License
+├── curriculum.pdf      # Downloadable CV
+└── image/              # Assets (avatar, icons, pirate, social cover)
 ```
 
 ## Tech Stack
 
 - **HTML/CSS/JS** - no frameworks, no build step
 - **Leaflet.js** - interactive journey map
-- **p5.js** - Snake game in terminal mode
 - **Font Awesome** - icons
-- **Google Fonts** - Space Grotesk, Space Mono, Caveat, Fira Code
+- **Google Fonts** - Space Grotesk, Space Mono, Caveat
 
 ## Run Locally
 
